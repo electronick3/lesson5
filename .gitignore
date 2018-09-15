@@ -5,3 +5,7 @@ out
 target
 *.7z
 *.zip
+/.idea/libraries/*.xml
+/*.iml
+/.idea/artifacts/*.xml
+/.idea/*.xml

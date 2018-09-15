@@ -4,7 +4,27 @@
     <groupId>ru.chagay.spring</groupId>
     <artifactId>lesson5</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <name>lesson5</name>
+    <packaging>war</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reportng.outputEncoding>UTF-8</project.reportng.outputEncoding>
+        <spring.version>5.0.8 RELEASE</spring.version>
+        <jstl.version>1.2.1</jstl.version>
+        <jsp.version>2.3.1</jsp.version>
+        <servlets.version>3.1.0</servlets.version>
+    </properties>
+
     <dependencies>
+	  <!-- https://mvnrepository.com/artifact/junit/junit -->
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>RELEASE</version>
+          <scope>test</scope>
+      </dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 			<dependency>
 			<groupId>org.springframework</groupId>
@@ -17,12 +37,78 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>5.0.9.RELEASE</version>
 		</dependency>
-		
 		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.3.6.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+		        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>5.0.8.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.0.9.RELEASE</version>
+        </dependency>
     </dependencies>
+	
+	<developers>
+        <developer>
+            <id>Chagay</id>
+            <name>Chagay Nickolay</name>
+            <email>nickolay@chagay.ru</email>
+        </developer>
+   </developers>
+   
+   <build>
+       <finalName>lesson5</finalName>
+       <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <configuration>
+                   <source>1.8</source>
+                   <target>1.8</target>
+                   <encoding>UTF-8</encoding>
+               </configuration>
+           </plugin>
+
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-war-plugin</artifactId>
+               <configuration>
+                   <failOnMissingWebXml>false</failOnMissingWebXml>
+               </configuration>
+           </plugin>
+       </plugins>
+   </build>
 </project>
