@@ -14,7 +14,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-
 @Configuration
 @EnableJpaRepositories("ru.chagay.repository")
 @EnableTransactionManagement

@@ -10,7 +10,6 @@ import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 @Configuration
 @EnableWebMvc
 @Import(AppConfiguration.class)
-
 public class DispatcherServletConfig implements WebMvcConfigurer{
 
         public void addResourceHandlers(ResourceHandlerRegistry registry​){
