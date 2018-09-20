@@ -46,7 +46,7 @@ public class AppConfiguration {
         factory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         //указание пакетов в котором будут находится классы-сущности
-        factory.setPackagesToScan("ru.chagay.adv.models");
+        factory.setPackagesToScan("ru.chagay.models");
 
         //создание свойств для настройки Hibernate
         Properties jpaProperties = new Properties();
